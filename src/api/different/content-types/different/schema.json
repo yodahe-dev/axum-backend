@@ -36,6 +36,118 @@
     "description": {
       "type": "blocks",
       "required": true
+    },
+    "differentHeroTitle": {
+      "type": "string",
+      "default": "The AXUM SEC Difference",
+      "required": true
+    },
+    "differentHeroSubtitle": {
+      "type": "string",
+      "default": "Four pillars that make our cybersecurity approach unmatched",
+      "required": true
+    },
+    "differentHeroGradient": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    },
+    "Differentiator": {
+      "type": "component",
+      "component": "differentiator.differentiator",
+      "repeatable": true
+    },
+    "innovationTitle": {
+      "type": "string",
+      "default": "Innovation at Our Core",
+      "required": true
+    },
+    "innovationIconName": {
+      "type": "string",
+      "default": "Shield",
+      "required": true
+    },
+    "innovationSubheading": {
+      "type": "string",
+      "default": "Our Innovation Philosophy",
+      "required": true
+    },
+    "innovationDescription": {
+      "type": "blocks",
+      "required": true
+    },
+    "innovationPoints": {
+      "type": "component",
+      "component": "differentiator.innovation-points",
+      "repeatable": true,
+      "required": false
+    },
+    "technologyBadgeText": {
+      "type": "string",
+      "default": "Our Technology",
+      "required": true
+    },
+    "technologyTitle": {
+      "type": "string",
+      "required": true
+    },
+    "technologyDescription": {
+      "type": "string",
+      "default": "Leveraging advanced tools for unparalleled protection",
+      "required": true
+    },
+    "teachltemtitle": {
+      "type": "string",
+      "required": true
+    },
+    "technologyItems": {
+      "type": "component",
+      "component": "differentiator.technology-items",
+      "repeatable": true
+    },
+    "testimonialBadgeText": {
+      "type": "string",
+      "default": "Client Voices",
+      "required": true
+    },
+    "testimonialDescription": {
+      "type": "text",
+      "default": "Discover why businesses choose AXUM SEC for their cybersecurity needs",
+      "required": true
+    },
+    "testimonialTitle": {
+      "type": "string",
+      "default": "What Our Clients Say",
+      "required": true
+    },
+    "teachltemdescription": {
+      "type": "text",
+      "required": true
+    },
+    "testimonialsList": {
+      "type": "component",
+      "component": "differentiator.testimonials-list",
+      "repeatable": true,
+      "required": true
+    },
+    "ctaTitle": {
+      "type": "string",
+      "default": "Experience the AXUM SEC Difference",
+      "required": true
+    },
+    "ctaSubtitle": {
+      "type": "text",
+      "default": "Join forward-thinking businesses that trust our innovative approach to cybersecurity"
+    },
+    "ctaButtonText": {
+      "type": "string",
+      "default": "Get Started Today",
+      "required": true
+    },
+    "ctaButtonUrl": {
+      "type": "string",
+      "default": "/",
+      "required": true
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_differentiator_innovation_points",
+  "info": {
+    "displayName": "innovationPoints",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "pointTitles": {
+      "type": "string",
+      "required": true
+    },
+    "pointDescription": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

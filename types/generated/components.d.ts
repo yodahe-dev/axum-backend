@@ -111,6 +111,90 @@ export interface CrowdSourcingPageTestimonials extends Struct.ComponentSchema {
   };
 }
 
+export interface DifferentiatorDifferentiator extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_differentiators';
+  info: {
+    displayName: 'Differentiator';
+    icon: 'bulletList';
+  };
+  attributes: {
+    differentiatorIconName: Schema.Attribute.String & Schema.Attribute.Required;
+    differentiatorPoint: Schema.Attribute.Component<
+      'differentiator.differentiator-points',
+      true
+    > &
+      Schema.Attribute.Required;
+    differentiatorTitle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface DifferentiatorDifferentiatorPoints
+  extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_differentiator_points';
+  info: {
+    displayName: 'differentiatorPoints';
+    icon: 'bulletList';
+  };
+  attributes: {
+    differentiatorPointsText: Schema.Attribute.Text & Schema.Attribute.Required;
+  };
+}
+
+export interface DifferentiatorInnovationPoints extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_innovation_points';
+  info: {
+    displayName: 'innovationPoints';
+    icon: 'bulletList';
+  };
+  attributes: {
+    pointDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    pointTitles: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface DifferentiatorPointDescription extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_point_descriptions';
+  info: {
+    displayName: 'pointDescription';
+    icon: 'bulletList';
+  };
+  attributes: {};
+}
+
+export interface DifferentiatorPointTitle extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_point_titles';
+  info: {
+    displayName: 'pointTitle';
+    icon: 'bulletList';
+  };
+  attributes: {};
+}
+
+export interface DifferentiatorTechnologyItems extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_technology_items';
+  info: {
+    displayName: 'technologyItems';
+    icon: 'bulletList';
+  };
+  attributes: {
+    techItemColor: Schema.Attribute.String;
+    techItemIconName: Schema.Attribute.String;
+  };
+}
+
+export interface DifferentiatorTestimonialsList extends Struct.ComponentSchema {
+  collectionName: 'components_differentiator_testimonials_lists';
+  info: {
+    displayName: 'testimonialsList';
+    icon: 'bulletList';
+  };
+  attributes: {
+    authorName: Schema.Attribute.String & Schema.Attribute.Required;
+    authorPosition: Schema.Attribute.String & Schema.Attribute.Required;
+    quoteText: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -123,6 +207,13 @@ declare module '@strapi/strapi' {
       'crowd-sourcing-page.overview-traditional-security': CrowdSourcingPageOverviewTraditionalSecurity;
       'crowd-sourcing-page.steps': CrowdSourcingPageSteps;
       'crowd-sourcing-page.testimonials': CrowdSourcingPageTestimonials;
+      'differentiator.differentiator': DifferentiatorDifferentiator;
+      'differentiator.differentiator-points': DifferentiatorDifferentiatorPoints;
+      'differentiator.innovation-points': DifferentiatorInnovationPoints;
+      'differentiator.point-description': DifferentiatorPointDescription;
+      'differentiator.point-title': DifferentiatorPointTitle;
+      'differentiator.technology-items': DifferentiatorTechnologyItems;
+      'differentiator.testimonials-list': DifferentiatorTestimonialsList;
     }
   }
 }

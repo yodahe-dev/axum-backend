@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_differentiator_testimonials_lists",
+  "info": {
+    "displayName": "testimonialsList",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "quoteText": {
+      "type": "string",
+      "required": true
+    },
+    "authorName": {
+      "type": "string",
+      "required": true
+    },
+    "authorPosition": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

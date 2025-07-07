@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_differentiator_technology_items",
+  "info": {
+    "displayName": "technologyItems",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "techItemIconName": {
+      "type": "string",
+      "required": false
+    },
+    "techItemColor": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

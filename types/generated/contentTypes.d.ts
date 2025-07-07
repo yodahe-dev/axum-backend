@@ -500,7 +500,44 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaButtonText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Get Started Today'>;
+    ctaButtonUrl: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/'>;
+    ctaSubtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Join forward-thinking businesses that trust our innovative approach to cybersecurity'>;
+    ctaTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Experience the AXUM SEC Difference'>;
     description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    differentHeroGradient: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    differentHeroSubtitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Four pillars that make our cybersecurity approach unmatched'>;
+    differentHeroTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'The AXUM SEC Difference'>;
+    Differentiator: Schema.Attribute.Component<
+      'differentiator.differentiator',
+      true
+    >;
+    innovationDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    innovationIconName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Shield'>;
+    innovationPoints: Schema.Attribute.Component<
+      'differentiator.innovation-points',
+      true
+    >;
+    innovationSubheading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Our Innovation Philosophy'>;
+    innovationTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Innovation at Our Core'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -509,6 +546,33 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    teachltemdescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    teachltemtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    technologyBadgeText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Our Technology'>;
+    technologyDescription: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Leveraging advanced tools for unparalleled protection'>;
+    technologyItems: Schema.Attribute.Component<
+      'differentiator.technology-items',
+      true
+    >;
+    technologyTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    testimonialBadgeText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Client Voices'>;
+    testimonialDescription: Schema.Attribute.Text &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Discover why businesses choose AXUM SEC for their cybersecurity needs'>;
+    testimonialsList: Schema.Attribute.Component<
+      'differentiator.testimonials-list',
+      true
+    > &
+      Schema.Attribute.Required;
+    testimonialTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'What Our Clients Say'>;
     title: Schema.Attribute.Blocks & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

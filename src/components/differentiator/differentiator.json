@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_differentiator_differentiators",
+  "info": {
+    "displayName": "Differentiator",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "differentiatorTitle": {
+      "type": "string",
+      "required": true
+    },
+    "differentiatorIconName": {
+      "type": "string",
+      "required": true
+    },
+    "differentiatorPoint": {
+      "type": "component",
+      "component": "differentiator.differentiator-points",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}
