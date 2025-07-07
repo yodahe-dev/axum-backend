@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_crowd_sourcing_page_overview_traditional_securities",
+  "info": {
+    "displayName": "overviewTraditionalSecurity"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

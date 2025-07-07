@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "differents",
+  "info": {
+    "singularName": "different",
+    "pluralName": "differents",
+    "displayName": "different"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "badgeText": {
+      "type": "string",
+      "default": "Why AXUM SEC",
+      "required": true
+    },
+    "title": {
+      "type": "blocks",
+      "required": true
+    },
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "subtitle": {
+      "type": "blocks",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

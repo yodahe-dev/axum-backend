@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_crowd_sourcing_page_case_studies",
+  "info": {
+    "displayName": "caseStudies"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "challenge": {
+      "type": "text",
+      "required": true
+    },
+    "solution": {
+      "type": "text"
+    },
+    "result": {
+      "type": "text"
+    },
+    "metrics": {
+      "type": "component",
+      "component": "crowd-sourcing-page.metrics",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_crowd_sourcing_page_steps",
+  "info": {
+    "displayName": "steps"
+  },
+  "options": {},
+  "attributes": {
+    "stepNumber": {
+      "type": "biginteger",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}

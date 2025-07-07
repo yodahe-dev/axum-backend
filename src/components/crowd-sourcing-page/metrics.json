@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_crowd_sourcing_page_metrics",
+  "info": {
+    "displayName": "metrics"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

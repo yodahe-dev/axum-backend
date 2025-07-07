@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_crowd_sourcing_page_model_benefits",
+  "info": {
+    "displayName": "modelBenefits"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}

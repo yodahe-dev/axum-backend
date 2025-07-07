@@ -1,0 +1,101 @@
+{
+  "kind": "singleType",
+  "collectionName": "crowd_sourcings",
+  "info": {
+    "singularName": "crowd-sourcing",
+    "pluralName": "crowd-sourcings",
+    "displayName": "CrowdSourcing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "default": "Unleashing the Power of Crowd-Sourced Cybersecurity",
+      "required": true
+    },
+    "heroSubtitle": {
+      "type": "string",
+      "default": "Leverage the Expertise of a Global Network of Ethical Hackers to Fortify Your Digital Defenses",
+      "required": true
+    },
+    "heroBadge": {
+      "type": "string",
+      "default": "Why AXUM SEC",
+      "required": false
+    },
+    "overviewTitle": {
+      "type": "string",
+      "default": "Overview",
+      "required": true
+    },
+    "overviewDescription": {
+      "type": "blocks",
+      "required": true
+    },
+    "overviewTraditionalSecurity": {
+      "type": "component",
+      "component": "crowd-sourcing-page.overview-traditional-security",
+      "repeatable": true
+    },
+    "overviewCrowdSourcing": {
+      "type": "component",
+      "component": "crowd-sourcing-page.overview-crowd-sourcing",
+      "repeatable": true,
+      "required": true
+    },
+    "modelTitle": {
+      "type": "string",
+      "default": "What is AXUM Crowd Sourcing?",
+      "required": true
+    },
+    "modelSubtitle": {
+      "type": "text",
+      "default": "A revolutionary platform connecting organizations with a global network of ethical hackers",
+      "required": true
+    },
+    "modelDescription": {
+      "type": "blocks",
+      "required": true
+    },
+    "modelBenefits": {
+      "type": "component",
+      "component": "crowd-sourcing-page.model-benefits",
+      "repeatable": true
+    },
+    "steps": {
+      "type": "component",
+      "component": "crowd-sourcing-page.steps",
+      "repeatable": true
+    },
+    "benefits": {
+      "type": "component",
+      "component": "crowd-sourcing-page.benefits",
+      "repeatable": true
+    },
+    "caseStudies": {
+      "type": "component",
+      "component": "crowd-sourcing-page.case-studies",
+      "repeatable": true
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "crowd-sourcing-page.testimonials",
+      "repeatable": true
+    },
+    "faqs": {
+      "type": "component",
+      "component": "crowd-sourcing-page.faqs",
+      "repeatable": true
+    },
+    "ctaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ctaSubtitle": {
+      "type": "text"
+    }
+  }
+}
