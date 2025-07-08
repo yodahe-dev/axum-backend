@@ -493,10 +493,6 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    backgroundImage: Schema.Attribute.Media<'images' | 'files'>;
-    badgeText: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'Why AXUM SEC'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -511,7 +507,6 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
     ctaTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Experience the AXUM SEC Difference'>;
-    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
     differentHeroGradient: Schema.Attribute.Boolean &
       Schema.Attribute.DefaultTo<true>;
     differentHeroSubtitle: Schema.Attribute.String &
@@ -524,6 +519,13 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
       'differentiator.differentiator',
       true
     >;
+    herobackgroundImage: Schema.Attribute.Media<'images' | 'files'>;
+    herobadgeText: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Why AXUM SEC'>;
+    herodescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    herosubtitle: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    herotitle: Schema.Attribute.Blocks & Schema.Attribute.Required;
     innovationDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
     innovationIconName: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -545,7 +547,6 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    subtitle: Schema.Attribute.Blocks & Schema.Attribute.Required;
     teachltemdescription: Schema.Attribute.Text & Schema.Attribute.Required;
     teachltemtitle: Schema.Attribute.String & Schema.Attribute.Required;
     technologyBadgeText: Schema.Attribute.String &
@@ -573,7 +574,6 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
     testimonialTitle: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'What Our Clients Say'>;
-    title: Schema.Attribute.Blocks & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

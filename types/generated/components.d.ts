@@ -178,7 +178,9 @@ export interface DifferentiatorTechnologyItems extends Struct.ComponentSchema {
   };
   attributes: {
     techItemColor: Schema.Attribute.String;
+    techItemdescription: Schema.Attribute.Text & Schema.Attribute.Required;
     techItemIconName: Schema.Attribute.String;
+    techItemIconTitle: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 

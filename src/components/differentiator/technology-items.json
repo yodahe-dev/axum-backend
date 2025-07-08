@@ -12,6 +12,14 @@
     },
     "techItemColor": {
       "type": "string"
+    },
+    "techItemdescription": {
+      "type": "text",
+      "required": true
+    },
+    "techItemIconTitle": {
+      "type": "string",
+      "required": true
     }
   },
   "config": {}
