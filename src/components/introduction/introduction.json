@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_introduction_introductions",
+  "info": {
+    "displayName": "Introduction",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Why Partner With AXUM SEC?",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "iconName": {
+      "type": "string",
+      "default": "ShieldCheck ",
+      "required": true
+    }
+  },
+  "config": {}
+}

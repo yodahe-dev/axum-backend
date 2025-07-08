@@ -580,6 +580,49 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
+  collectionName: 'partners';
+  info: {
+    displayName: 'partner';
+    pluralName: 'partners';
+    singularName: 'partner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    badgeText: Schema.Attribute.String & Schema.Attribute.Required;
+    Benefits: Schema.Attribute.Component<'introduction.benefits', true> &
+      Schema.Attribute.Required;
+    BenefitsTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    BenefitSubtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Introduction: Schema.Attribute.Component<'introduction.introduction', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::partner.partner'
+    > &
+      Schema.Attribute.Private;
+    PartnersCard: Schema.Attribute.Component<
+      'introduction.partners-card',
+      true
+    > &
+      Schema.Attribute.Required;
+    PartnersTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Partnersubtitle: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    Strategy: Schema.Attribute.Component<'introduction.strategy', true>;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1092,6 +1135,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::crowd-sourcing.crowd-sourcing': ApiCrowdSourcingCrowdSourcing;
       'api::different.different': ApiDifferentDifferent;
+      'api::partner.partner': ApiPartnerPartner;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -197,6 +197,73 @@ export interface DifferentiatorTestimonialsList extends Struct.ComponentSchema {
   };
 }
 
+export interface IntroductionBenefits extends Struct.ComponentSchema {
+  collectionName: 'components_introduction_benefits';
+  info: {
+    displayName: 'Benefits';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface IntroductionIntroduction extends Struct.ComponentSchema {
+  collectionName: 'components_introduction_introductions';
+  info: {
+    displayName: 'Introduction';
+    icon: 'bulletList';
+  };
+  attributes: {
+    description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    iconName: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'ShieldCheck '>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Why Partner With AXUM SEC?'>;
+  };
+}
+
+export interface IntroductionPartnersCard extends Struct.ComponentSchema {
+  collectionName: 'components_introduction_partners_cards';
+  info: {
+    displayName: 'PartnersCard';
+  };
+  attributes: {
+    Contribution: Schema.Attribute.Text & Schema.Attribute.Required;
+    PartnersCardsubtitle: Schema.Attribute.String;
+    PartnersCardTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Profileimage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface IntroductionStrategy extends Struct.ComponentSchema {
+  collectionName: 'components_introduction_strategies';
+  info: {
+    displayName: 'Strategy';
+    icon: 'bulletList';
+  };
+  attributes: {
+    iconName: Schema.Attribute.String & Schema.Attribute.Required;
+    Strategylist: Schema.Attribute.Component<'introduction.strategylist', true>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface IntroductionStrategylist extends Struct.ComponentSchema {
+  collectionName: 'components_introduction_strategylists';
+  info: {
+    displayName: 'Strategylist';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -216,6 +283,11 @@ declare module '@strapi/strapi' {
       'differentiator.point-title': DifferentiatorPointTitle;
       'differentiator.technology-items': DifferentiatorTechnologyItems;
       'differentiator.testimonials-list': DifferentiatorTestimonialsList;
+      'introduction.benefits': IntroductionBenefits;
+      'introduction.introduction': IntroductionIntroduction;
+      'introduction.partners-card': IntroductionPartnersCard;
+      'introduction.strategy': IntroductionStrategy;
+      'introduction.strategylist': IntroductionStrategylist;
     }
   }
 }
