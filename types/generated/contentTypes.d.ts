@@ -410,10 +410,166 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiApiPentestPageApiPentestPage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'api_pentest_pages';
+  info: {
+    displayName: 'API Security Pentesting';
+    pluralName: 'api-pentest-pages';
+    singularName: 'api-pentest-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Apilist: Schema.Attribute.Component<'api-pentesting.apilist', true> &
+      Schema.Attribute.Required;
+    apiTypesSubtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    apiTypesTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    Button: Schema.Attribute.Component<
+      'cybersecurity-awareness-training.btns',
+      true
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaSubtitles: Schema.Attribute.String & Schema.Attribute.Required;
+    ctaTitles: Schema.Attribute.String & Schema.Attribute.Required;
+    feature: Schema.Attribute.Component<'api-pentesting.feature', true> &
+      Schema.Attribute.Required;
+    featuresSubtitle: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    featuresTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    heroBadge: Schema.Attribute.String & Schema.Attribute.Required;
+    heroCtaLink: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'/'>;
+    heroCtaText: Schema.Attribute.String & Schema.Attribute.Required;
+    heroSecondaryButton: Schema.Attribute.String & Schema.Attribute.Required;
+    heroSecondaryButtonLink: Schema.Attribute.String &
+      Schema.Attribute.Required;
+    heroSubtitle: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heroTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::api-pentest-page.api-pentest-page'
+    > &
+      Schema.Attribute.Private;
+    OurAPIPentestingMethodology: Schema.Attribute.Component<
+      'api-pentesting.benefits',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    testimonial: Schema.Attribute.Component<'api-pentesting.testimonial', true>;
+    testingSubtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    testingTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Vulnerabilities: Schema.Attribute.Component<
+      'api-pentesting.icon-card',
+      true
+    > &
+      Schema.Attribute.Required;
+    vulnerabilitiesSubtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    vulnerabilitiesTitle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiAttacksurfaceAttacksurface extends Struct.SingleTypeSchema {
+  collectionName: 'attacksurfaces';
+  info: {
+    displayName: 'Attack Surface Management';
+    pluralName: 'attacksurfaces';
+    singularName: 'attacksurface';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    attackBadge: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Service 1'>;
+    attackDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    attackFeatures: Schema.Attribute.Component<
+      'attacksurface.attack-features',
+      true
+    > &
+      Schema.Attribute.Required;
+    attackSteps: Schema.Attribute.Component<
+      'attacksurface.attack-steps',
+      true
+    > &
+      Schema.Attribute.Required;
+    attackTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Attack Surface Management'>;
+    benefitCards: Schema.Attribute.Component<
+      'attacksurface.benefit-cards',
+      true
+    > &
+      Schema.Attribute.Required;
+    benefitsDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    benefitsTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    controlBadge: Schema.Attribute.String & Schema.Attribute.Required;
+    controlDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    controlFeatures: Schema.Attribute.Component<
+      'attacksurface.control-features',
+      true
+    > &
+      Schema.Attribute.Required;
+    controlTitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaButtons: Schema.Attribute.Component<'attacksurface.cta-buttons', true> &
+      Schema.Attribute.Required;
+    ctaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    ctaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    featuresTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    heroBadge: Schema.Attribute.String & Schema.Attribute.Required;
+    heroDescription: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    heroTitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    howItWorksTitle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'How Attack Surface Management Works'>;
+    howItWorksTitle2: Schema.Attribute.String & Schema.Attribute.Required;
+    keyFeaturesTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::attacksurface.attacksurface'
+    > &
+      Schema.Attribute.Private;
+    primaryButton: Schema.Attribute.Component<'attacksurface.button', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    secondaryButton: Schema.Attribute.Component<
+      'attacksurface.secondary-button',
+      false
+    > &
+      Schema.Attribute.Required;
+    stepNumber: Schema.Attribute.Component<
+      'attacksurface.control-steps',
+      true
+    > &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCrowdSourcingCrowdSourcing extends Struct.SingleTypeSchema {
   collectionName: 'crowd_sourcings';
   info: {
-    displayName: 'CrowdSourcing';
+    displayName: 'Axum Crowd Sourcing';
     pluralName: 'crowd-sourcings';
     singularName: 'crowd-sourcing';
   };
@@ -482,10 +638,69 @@ export interface ApiCrowdSourcingCrowdSourcing extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCybersecurityAwarenessTrainingCybersecurityAwarenessTraining
+  extends Struct.SingleTypeSchema {
+  collectionName: 'cybersecurity_awareness_trainings';
+  info: {
+    displayName: 'Cybersecurity Awareness Training';
+    pluralName: 'cybersecurity-awareness-trainings';
+    singularName: 'cybersecurity-awareness-training';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefitsList: Schema.Attribute.Component<
+      'cybersecurity-awareness-training.benefits-list',
+      true
+    >;
+    BenefitsTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    BenefitSubtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ctaButtons: Schema.Attribute.Component<
+      'cybersecurity-awareness-training.cta-btn',
+      true
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 3;
+        },
+        number
+      >;
+    ctaSubtitle: Schema.Attribute.String & Schema.Attribute.Required;
+    ctaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    heroBadge: Schema.Attribute.String & Schema.Attribute.Required;
+    HeroButton: Schema.Attribute.Component<
+      'cybersecurity-awareness-training.hero-button',
+      true
+    > &
+      Schema.Attribute.Required;
+    heroDescription: Schema.Attribute.String & Schema.Attribute.Required;
+    heroTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::cybersecurity-awareness-training.cybersecurity-awareness-training'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    tabs: Schema.Attribute.Component<
+      'cybersecurity-awareness-training.tabs',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
   collectionName: 'differents';
   info: {
-    displayName: 'different';
+    displayName: 'How Axum SEC is Different';
     pluralName: 'differents';
     singularName: 'different';
   };
@@ -583,7 +798,7 @@ export interface ApiDifferentDifferent extends Struct.CollectionTypeSchema {
 export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
   collectionName: 'partners';
   info: {
-    displayName: 'partner';
+    displayName: 'Our Partners';
     pluralName: 'partners';
     singularName: 'partner';
   };
@@ -1133,7 +1348,10 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::api-pentest-page.api-pentest-page': ApiApiPentestPageApiPentestPage;
+      'api::attacksurface.attacksurface': ApiAttacksurfaceAttacksurface;
       'api::crowd-sourcing.crowd-sourcing': ApiCrowdSourcingCrowdSourcing;
+      'api::cybersecurity-awareness-training.cybersecurity-awareness-training': ApiCybersecurityAwarenessTrainingCybersecurityAwarenessTraining;
       'api::different.different': ApiDifferentDifferent;
       'api::partner.partner': ApiPartnerPartner;
       'plugin::content-releases.release': PluginContentReleasesRelease;

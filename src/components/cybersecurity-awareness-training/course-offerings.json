@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cybersecurity_awareness_training_course_offerings",
+  "info": {
+    "displayName": "CourseOfferings"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "blocks",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

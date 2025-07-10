@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_attacksurface_control_steps",
+  "info": {
+    "displayName": "controlSteps"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "cpu",
+      "required": true
+    }
+  },
+  "config": {}
+}

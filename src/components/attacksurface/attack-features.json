@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_attacksurface_attack_features",
+  "info": {
+    "displayName": "attackFeatures"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "activity",
+      "required": true
+    }
+  },
+  "config": {}
+}

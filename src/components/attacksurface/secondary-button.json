@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_attacksurface_secondary_buttons",
+  "info": {
+    "displayName": "secondaryButton"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Request Free Assessment",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "calendar",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "default": "/request-assessment",
+      "required": true
+    }
+  },
+  "config": {}
+}

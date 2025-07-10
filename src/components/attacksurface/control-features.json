@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_attacksurface_control_features",
+  "info": {
+    "displayName": "controlFeatures"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

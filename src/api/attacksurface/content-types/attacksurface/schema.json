@@ -1,0 +1,133 @@
+{
+  "kind": "singleType",
+  "collectionName": "attacksurfaces",
+  "info": {
+    "singularName": "attacksurface",
+    "pluralName": "attacksurfaces",
+    "displayName": "Attack Surface Management"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroBadge": {
+      "type": "string",
+      "required": true
+    },
+    "heroTitle": {
+      "type": "text",
+      "required": true
+    },
+    "heroDescription": {
+      "type": "blocks",
+      "required": true
+    },
+    "primaryButton": {
+      "type": "component",
+      "component": "attacksurface.button",
+      "repeatable": false
+    },
+    "secondaryButton": {
+      "type": "component",
+      "component": "attacksurface.secondary-button",
+      "repeatable": false,
+      "required": true
+    },
+    "attackBadge": {
+      "type": "string",
+      "default": "Service 1",
+      "required": true
+    },
+    "attackTitle": {
+      "type": "string",
+      "default": "Attack Surface Management",
+      "required": true
+    },
+    "attackDescription": {
+      "type": "blocks",
+      "required": true
+    },
+    "howItWorksTitle": {
+      "type": "string",
+      "default": "How Attack Surface Management Works",
+      "required": true
+    },
+    "attackSteps": {
+      "type": "component",
+      "component": "attacksurface.attack-steps",
+      "repeatable": true,
+      "required": true
+    },
+    "keyFeaturesTitle": {
+      "type": "string",
+      "required": true
+    },
+    "attackFeatures": {
+      "type": "component",
+      "component": "attacksurface.attack-features",
+      "repeatable": true,
+      "required": true
+    },
+    "controlBadge": {
+      "type": "string",
+      "required": true
+    },
+    "controlTitle": {
+      "type": "text",
+      "required": true
+    },
+    "controlDescription": {
+      "type": "blocks",
+      "required": true
+    },
+    "howItWorksTitle2": {
+      "type": "string",
+      "required": true
+    },
+    "stepNumber": {
+      "type": "component",
+      "component": "attacksurface.control-steps",
+      "repeatable": true,
+      "required": true
+    },
+    "featuresTitle": {
+      "type": "string",
+      "required": true
+    },
+    "controlFeatures": {
+      "type": "component",
+      "component": "attacksurface.control-features",
+      "repeatable": true,
+      "required": true
+    },
+    "benefitsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "benefitsDescription": {
+      "type": "text",
+      "required": true
+    },
+    "benefitCards": {
+      "type": "component",
+      "component": "attacksurface.benefit-cards",
+      "repeatable": true,
+      "required": true
+    },
+    "ctaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ctaDescription": {
+      "type": "text",
+      "required": true
+    },
+    "ctaButtons": {
+      "type": "component",
+      "component": "attacksurface.cta-buttons",
+      "repeatable": true,
+      "required": true
+    }
+  }
+}

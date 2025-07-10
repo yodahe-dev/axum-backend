@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_attacksurface_buttons",
+  "info": {
+    "displayName": "Button"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Manage Your Attack Surface",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "eye",
+      "required": true
+    },
+    "url": {
+      "type": "text",
+      "default": "/attacksurface",
+      "required": true
+    }
+  },
+  "config": {}
+}

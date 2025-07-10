@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_attacksurface_attack_steps",
+  "info": {
+    "displayName": "attackSteps"
+  },
+  "options": {},
+  "attributes": {
+    "stepNumber": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "activity",
+      "required": true
+    }
+  },
+  "config": {}
+}

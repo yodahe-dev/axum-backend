@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_cybersecurity_awareness_training_featuretab1s",
+  "info": {
+    "displayName": "featuretab1"
+  },
+  "options": {},
+  "attributes": {
+    "list": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

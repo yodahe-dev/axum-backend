@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_cybersecurity_awareness_training_btns",
+  "info": {
+    "displayName": "btns"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

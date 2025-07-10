@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_attacksurface_cta_buttons",
+  "info": {
+    "displayName": "ctaButtons"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "default": "/contact",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "calendar"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_attacksurface_benefit_cards",
+  "info": {
+    "displayName": "benefitCards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "default": "shield",
+      "required": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_cybersecurity_awareness_training_cta_btns",
+  "info": {
+    "displayName": "ctaBtn"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "Url": {
+      "type": "string",
+      "default": "/",
+      "required": true
+    }
+  },
+  "config": {}
+}

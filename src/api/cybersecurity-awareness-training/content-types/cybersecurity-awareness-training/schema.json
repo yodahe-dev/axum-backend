@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "cybersecurity_awareness_trainings",
+  "info": {
+    "singularName": "cybersecurity-awareness-training",
+    "pluralName": "cybersecurity-awareness-trainings",
+    "displayName": "Cybersecurity Awareness Training"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroBadge": {
+      "type": "string",
+      "required": true
+    },
+    "heroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "heroDescription": {
+      "type": "string",
+      "required": true
+    },
+    "HeroButton": {
+      "type": "component",
+      "component": "cybersecurity-awareness-training.hero-button",
+      "repeatable": true,
+      "required": true
+    },
+    "tabs": {
+      "type": "component",
+      "component": "cybersecurity-awareness-training.tabs",
+      "repeatable": false
+    },
+    "BenefitsTitle": {
+      "type": "string",
+      "required": true
+    },
+    "BenefitSubtitle": {
+      "type": "string",
+      "required": true
+    },
+    "benefitsList": {
+      "type": "component",
+      "component": "cybersecurity-awareness-training.benefits-list",
+      "repeatable": true
+    },
+    "ctaTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ctaSubtitle": {
+      "type": "string",
+      "required": true
+    },
+    "ctaButtons": {
+      "type": "component",
+      "component": "cybersecurity-awareness-training.cta-btn",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    }
+  }
+}
